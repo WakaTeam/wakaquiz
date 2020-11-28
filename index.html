@@ -1,1 +1,13 @@
 hello
+
+<script>
+  var url = "https://spreadsheets.google.com/feeds/cells/1yN682I6Pm_VjO90N6_lq4PvZ6t4724YKCFnNTfkSHbo/1/public/values?alt=json";
+$.ajax({
+    url:url,
+    dataType:"jsonp",
+    success:function(data) {
+        // data.feed.entry is an array of objects that represent each cell
+      console.log(data.feed)
+    },
+});
+</script>
